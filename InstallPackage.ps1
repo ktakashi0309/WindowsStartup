@@ -6,7 +6,7 @@ $packageList =@(
     'nodejs'
 )
 
-$packageList|%{Install-Package $_ -Force}
+$packageList|%{Install-Package $_ -Force -ProviderName ChocolateyGet}
 
 
 $Env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') +';'+ [Environment]::GetEnvironmentVariable('Path','User')
