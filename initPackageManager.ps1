@@ -1,3 +1,5 @@
+Set-ExecutionPolicy RemoteSigned -Force
+
 Install-PackageProvider NuGet -Force
-Install-Module PackageManagement -Force
-Set-ExecutionPolicy RemoteSigned
+Install-PackageProvider ChocolateyGet -Force
+Install-PackageProvider PowerShellGet -Force

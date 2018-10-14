@@ -1,6 +1,5 @@
-Import-Module PackageManagement
-Install-PackageProvider NuGet -Force
-Install-PackageProvider ChocolateyGet -Force
-Install-Module PowerShellGet -Force
+#何故かWarningが消えないのでnull捨て
+Install-Module PowerShellGet -Force 3> $null
+Remove-Module PSReadLine
+Install-Module PSReadline -AllowPrerelease -Force
 Install-Module posh-git -Force
-Install-Module PSReadline -AllowPrerelease -Force -SkipPublisherCheck
