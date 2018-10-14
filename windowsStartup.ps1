@@ -1,1 +1,1 @@
-echo hoge
+iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/ktakashi0309/WindowsStartup/master/InstallModule.ps1'))
