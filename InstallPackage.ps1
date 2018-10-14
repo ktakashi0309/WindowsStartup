@@ -1,8 +1,12 @@
-Install-Package git -Force
-Install-Package GoogleChrome -Force
-install-package visualstudiocode -Force
-install-package googlejapaneseinput -Force
-install-package nodejs -Force
+$packageList =@(
+    'git',
+    'GoogleChrome',
+    'visualstudiocode',
+    'googlejapaneseinput',
+    'nodejs'
+)
+
+$packageList|%{Install-Package $_ -Force}
 
 $Env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') +';'+ [Environment]::GetEnvironmentVariable('Path','User')
 
