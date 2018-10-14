@@ -1,5 +1,6 @@
-Install-PackageProvider NuGet
-Install-PackageProvider ChocolateyGet
+Import-Module PackageManagement
+Install-PackageProvider NuGet -Force
+Install-PackageProvider ChocolateyGet -Force
 
-Install-Module PSReadLine
-Install-Module posh-git
+Install-Module PSReadLine -Force
+Install-Module posh-git -Force
