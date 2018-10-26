@@ -1,6 +1,5 @@
 $scriptList = @(
     'InstallPackage.ps1',
-    'InstallModule.ps1'
 )
 
 filter Invoke-Script{

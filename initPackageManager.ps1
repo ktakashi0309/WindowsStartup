@@ -3,6 +3,7 @@ Set-ExecutionPolicy RemoteSigned -Force
 $providerList = @(
     'NuGet',
     'ChocolateyGet',
+    'Chocolatey',
     'PowerShellGet'
 )
 

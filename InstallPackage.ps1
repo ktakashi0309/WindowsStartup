@@ -1,12 +1,28 @@
-$chocolateyPackageList =@(
+$chocolateygetPackageList =@(
     'git',
     'GoogleChrome',
     'visualstudiocode',
-    'googlejapaneseinput',
     'nodejs'
 )
+$chocolateyPackageList =@(
+    'GoogleJapaneseInput'
+)
+$psgetPackageList =@(
+    'posh-git'
+)
+$psgetbetaPackageList =@(
+    'PSReadLine'
+)
+$nugetPackageList=@(
 
-$chocolateyPackageList|%{Install-Package $_ -Force -ProviderName ChocolateyGet}
+)
+
+$chocolateygetPackageList|%{Install-Package $_ -Force -ProviderName ChocolateyGet}
+$chocolateyPackageList|%{Install-Package $_ -Force -ProviderName Chocolatey}
+$psgetPackageList|%{Install-Package $_ -Force -ProviderName PowerShellGet}
+$psgetbetaPackageList|%{Install-Package  -AllowPrereleaseVersions $_ -Force -ProviderName PowerShellGet}
+$nugetPackageList|%{Install-Package $_ -Force -ProviderName NuGet}
+
 
 $Env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') +';'+ [Environment]::GetEnvironmentVariable('Path','User')
 
