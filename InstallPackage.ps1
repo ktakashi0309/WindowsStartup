@@ -10,9 +10,7 @@ $chocolateyPackageList =@(
 $psgetPackageList =@(
     'posh-git'
 )
-$psgetbetaPackageList =@(
-    'PSReadLine'
-)
+
 $nugetPackageList=@(
 
 )
